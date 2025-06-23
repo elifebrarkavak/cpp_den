@@ -15,19 +15,28 @@
 void Contact::setFirstName() 
 {
     std::cout << "Enter first name: ";
-    std::getline(std::cin, this->firstName);
+    if (!std::getline(std::cin, this->firstName)) {
+        std::cout << "\nInput interrupted. Exiting...\n";
+        std::exit(1);
+    }
 }
 
 void Contact::setLastName() 
 {
     std::cout << "Enter last name: ";
-    std::getline(std::cin, this->lastName);
+    if (!std::getline(std::cin, this->lastName)) {
+        std::cout << "\nInput interrupted. Exiting...\n";
+        std::exit(1);
+    }
 }
 
 void Contact::setNickName() 
 {
     std::cout << "Enter nickname: ";
-    std::getline(std::cin, this->nickName);
+    if (!std::getline(std::cin, this->nickName)) {
+        std::cout << "\nInput interrupted. Exiting...\n";
+        std::exit(1);
+    }
 }
 
 void Contact::setPhoneNumber()
@@ -36,9 +45,18 @@ void Contact::setPhoneNumber()
     bool valid = false;
 
     while (!valid) 
-	{
+    {
         std::cout << "Enter phone number: ";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input)) {
+            std::cout << "\nInput interrupted. Exiting...\n";
+            std::exit(1);
+        }
+
+        if (input.empty()) {
+            std::cout << "Phone number cannot be empty. Try again.\n";
+            continue;
+        }
+
         valid = true;
         for (size_t i = 0; i < input.length(); ++i) {
             if (!std::isdigit(input[i])) {
@@ -46,18 +64,23 @@ void Contact::setPhoneNumber()
                 break;
             }
         }
+
         if (!valid)
             std::cout << "Phone number must contain only digits (0-9). Try again.\n";
     }
+
     this->phoneNumber = input;
 }
-
 
 void Contact::setDarkSecret() 
 {
     std::cout << "Enter dark secret: ";
-    std::getline(std::cin, this->darkSecret);
+    if (!std::getline(std::cin, this->darkSecret)) {
+        std::cout << "\nInput interrupted. Exiting...\n";
+        std::exit(1);
+    }
 }
+
 
 bool Contact::isEmpty() const
 {

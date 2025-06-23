@@ -132,13 +132,37 @@ void Account::_displayTimestamp(void)
     std::time_t t = std::time(NULL);
     std::tm *tm = std::localtime(&t);
 
-    std::cout << "[" 
-              << (tm->tm_year + 1900)
-              << (tm->tm_mon + 1 < 10 ? "0" : "") << (tm->tm_mon + 1)
-              << (tm->tm_mday < 10 ? "0" : "") << tm->tm_mday
-              << "_"
-              << (tm->tm_hour < 10 ? "0" : "") << tm->tm_hour
-              << (tm->tm_min < 10 ? "0" : "") << tm->tm_min
-              << (tm->tm_sec < 10 ? "0" : "") << tm->tm_sec
-              << "] ";
+    std::cout << "[";
+
+    std::cout << (tm->tm_year + 1900);
+
+    if (tm->tm_mon + 1 < 10)
+        std::cout << "0" << (tm->tm_mon + 1);
+    else
+        std::cout << (tm->tm_mon + 1);
+
+    if (tm->tm_mday < 10)
+        std::cout << "0" << tm->tm_mday;
+    else
+        std::cout << tm->tm_mday;
+
+    std::cout << "_";
+
+    if (tm->tm_hour < 10)
+        std::cout << "0" << tm->tm_hour;
+    else
+        std::cout << tm->tm_hour;
+
+    if (tm->tm_min < 10)
+        std::cout << "0" << tm->tm_min;
+    else
+        std::cout << tm->tm_min;
+
+    if (tm->tm_sec < 10)
+        std::cout << "0" << tm->tm_sec;
+    else
+        std::cout << tm->tm_sec;
+
+    std::cout << "] ";
 }
+
