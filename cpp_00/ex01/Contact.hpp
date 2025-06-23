@@ -16,6 +16,8 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
+#include <sstream>
+#include <limits>
 
 class Contact
 {
@@ -24,15 +26,19 @@ class Contact
 		std::string lastName;
 		std::string phoneNumber;
 		std::string nickName;
-		std::string workspace;
+		std::string darkSecret;
 	public:
-		void setContact();
+		void setFirstName();
+		void setLastName();
+		void setNickName();
+		void setPhoneNumber();
+		void setDarkSecret();
 		bool isEmpty() const;
 		std::string getFirstName() const;
    		std::string getLastName() const;
    		std::string getNickName() const;
     	std::string getPhoneNumber() const;
-    	std::string getWorkspace() const;
+    	std::string getdarkSecret() const;
 };
 
 #endif

@@ -6,8 +6,6 @@ CPP = c++
 
 CPP_FLAGS = -Wall -Werror -Wextra --std=c++98
 
-OBJ := $(SRCS:.c=.o)
-
 all: ${NAME}
 
 $(NAME): $(SRCS)
