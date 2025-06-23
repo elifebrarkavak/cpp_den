@@ -1,6 +1,6 @@
-SRCS = Account.cpp tests.cpp
+NAME =  replace
 
-NAME = account
+SRC = main.cpp FileReplace.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

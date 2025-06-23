@@ -17,7 +17,7 @@ void Contact::setFirstName()
     std::cout << "Enter first name: ";
     if (!std::getline(std::cin, this->firstName)) {
         std::cout << "\nInput interrupted. Exiting...\n";
-        std::exit(1);
+        return ;
     }
 }
 
@@ -26,7 +26,7 @@ void Contact::setLastName()
     std::cout << "Enter last name: ";
     if (!std::getline(std::cin, this->lastName)) {
         std::cout << "\nInput interrupted. Exiting...\n";
-        std::exit(1);
+        return ;
     }
 }
 
@@ -35,7 +35,7 @@ void Contact::setNickName()
     std::cout << "Enter nickname: ";
     if (!std::getline(std::cin, this->nickName)) {
         std::cout << "\nInput interrupted. Exiting...\n";
-        std::exit(1);
+        return ;
     }
 }
 
@@ -49,7 +49,7 @@ void Contact::setPhoneNumber()
         std::cout << "Enter phone number: ";
         if (!std::getline(std::cin, input)) {
             std::cout << "\nInput interrupted. Exiting...\n";
-            std::exit(1);
+            return ;
         }
 
         if (input.empty()) {
@@ -77,38 +77,38 @@ void Contact::setDarkSecret()
     std::cout << "Enter dark secret: ";
     if (!std::getline(std::cin, this->darkSecret)) {
         std::cout << "\nInput interrupted. Exiting...\n";
-        std::exit(1);
+        return ;
     }
 }
 
 
-bool Contact::isEmpty() const
+bool Contact::isEmpty()
 {
 	return (firstName.empty() || lastName.empty() || nickName.empty()
 		 || phoneNumber.empty() || darkSecret.empty());
 }
 
-std::string Contact::getFirstName() const
+std::string Contact::getFirstName()
 {
     return firstName;
 }
 
-std::string Contact::getLastName() const
+std::string Contact::getLastName()
 {
     return lastName;
 }
 
-std::string Contact::getNickName() const
+std::string Contact::getNickName()
 {
     return nickName;
 }
 
-std::string Contact::getPhoneNumber() const
+std::string Contact::getPhoneNumber()
 {
     return phoneNumber;
 }
 
-std::string Contact::getdarkSecret() const
+std::string Contact::getdarkSecret()
 {
     return darkSecret;
 }

@@ -1,6 +1,6 @@
-SRCS = Account.cpp tests.cpp
+NAME =  violence
 
-NAME = account
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 

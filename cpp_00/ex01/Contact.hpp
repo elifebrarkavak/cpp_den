@@ -33,12 +33,12 @@ class Contact
 		void setNickName();
 		void setPhoneNumber();
 		void setDarkSecret();
-		bool isEmpty() const;
-		std::string getFirstName() const;
-   		std::string getLastName() const;
-   		std::string getNickName() const;
-    	std::string getPhoneNumber() const;
-    	std::string getdarkSecret() const;
+		bool isEmpty();
+		std::string getFirstName();
+   		std::string getLastName();
+   		std::string getNickName();
+    	std::string getPhoneNumber();
+    	std::string getdarkSecret();
 };
 
 #endif

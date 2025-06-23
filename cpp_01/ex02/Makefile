@@ -1,6 +1,6 @@
-SRCS = Account.cpp tests.cpp
+NAME = program
 
-NAME = account
+SRC = main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
