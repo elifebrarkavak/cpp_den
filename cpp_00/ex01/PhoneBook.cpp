@@ -23,13 +23,13 @@ void PhoneBook::ft_Add()
 	if (this->index >= 8)
 		this->index = 0;
 
-	this->ContackArray[this->index].setFirstName();
-	this->ContackArray[this->index].setLastName();
-	this->ContackArray[this->index].setNickName();
-	this->ContackArray[this->index].setPhoneNumber();
-	this->ContackArray[this->index].setDarkSecret();
+	this->ContactArray[this->index].setFirstName();
+	this->ContactArray[this->index].setLastName();
+	this->ContactArray[this->index].setNickName();
+	this->ContactArray[this->index].setPhoneNumber();
+	this->ContactArray[this->index].setDarkSecret();
 
-	if (this->ContackArray[this->index].isEmpty())
+	if (this->ContactArray[this->index].isEmpty())
 	{
 		std::cout << "Contact was not saved due to missing fields." << std::endl;
 		return;
@@ -58,9 +58,9 @@ void PhoneBook::ft_Search()
 
 	for (int i = 0; i < this->count; ++i)
 	{
-		std::string firstName = ContackArray[i].getFirstName();
-		std::string lastName = ContackArray[i].getLastName();
-		std::string nickname = ContackArray[i].getNickName();
+		std::string firstName = ContactArray[i].getFirstName();
+		std::string lastName = ContactArray[i].getLastName();
+		std::string nickname = ContactArray[i].getNickName();
 
 		if (firstName.length() > 10)
 			firstName = firstName.substr(0, 9) + ".";
@@ -77,7 +77,7 @@ void PhoneBook::ft_Search()
 		std::cout << "     ---------------------------------------------" << std::endl;
 		
 	}
-	std::cout << "Enter an index or -1 to exit search: ";
+	std::cout << "Enter an index or 9 to exit search: ";
 	std::string input;
 	std::getline(std::cin, input);
 	int get_index;
@@ -86,7 +86,7 @@ void PhoneBook::ft_Search()
 	str = input.c_str();
 	get_index = str[0] - '0';
 
-	if (get_index == -1)
+	if (get_index == 9)
 	{
 		std::cout << "Exit Search" << std::endl;
 		return;
@@ -97,11 +97,11 @@ void PhoneBook::ft_Search()
 		return;
 	}
 	
-	std::string firstName = ContackArray[get_index].getFirstName();
-	std::string lastName = ContackArray[get_index].getLastName();
-	std::string nickname = ContackArray[get_index].getNickName();
-	std::string phonenumber = ContackArray[get_index].getPhoneNumber();
-	std::string darksecret = ContackArray[get_index].getdarkSecret();
+	std::string firstName = ContactArray[get_index].getFirstName();
+	std::string lastName = ContactArray[get_index].getLastName();
+	std::string nickname = ContactArray[get_index].getNickName();
+	std::string phonenumber = ContactArray[get_index].getPhoneNumber();
+	std::string darksecret = ContactArray[get_index].getdarkSecret();
 
 	if (firstName.length() > 10)
 		firstName = firstName.substr(0, 9) + ".";

@@ -18,7 +18,7 @@
 class PhoneBook
 {
 	private:
-		Contact	ContackArray[8];
+		Contact	ContactArray[8];
 		int		index;
 		int		count;
 	public:

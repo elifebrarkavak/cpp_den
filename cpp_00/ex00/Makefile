@@ -2,7 +2,7 @@ SRCS = megaphone.cpp
 
 NAME = megaphone
 
-OBJ = $(SRC:.cpp=.o)
+OBJ = $(SRCS:.cpp=.o)
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
