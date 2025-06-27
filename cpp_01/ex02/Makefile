@@ -1,16 +1,16 @@
-NAME = program
+NAME = brain
 
 SRC = main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
-CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)

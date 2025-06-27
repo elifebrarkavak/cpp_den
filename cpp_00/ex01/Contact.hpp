@@ -16,8 +16,6 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
-#include <sstream>
-#include <limits>
 
 class Contact
 {

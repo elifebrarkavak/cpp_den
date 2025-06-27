@@ -6,12 +6,11 @@
 /*   By: elikavak <elikavak@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 20:49:30 by elikavak          #+#    #+#             */
-/*   Updated: 2025/06/23 21:30:46 by elikavak         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:12:07 by elikavak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
-#include <iostream>
 
 HumanB::HumanB(std::string name) 
 {

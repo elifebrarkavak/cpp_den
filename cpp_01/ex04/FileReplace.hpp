@@ -6,7 +6,7 @@
 /*   By: elikavak <elikavak@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 22:39:33 by elikavak          #+#    #+#             */
-/*   Updated: 2025/06/23 22:48:59 by elikavak         ###   ########.fr       */
+/*   Updated: 2025/06/27 11:29:08 by elikavak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class FileReplace
 	public:
 		FileReplace(std::string filename, std::string search, std::string replace);
 		~FileReplace();
-		bool check_process();
+		int check_process();
 };
 
 #endif
