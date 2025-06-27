@@ -6,7 +6,7 @@
 /*   By: elikavak <elikavak@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/23 20:49:36 by elikavak          #+#    #+#             */
-/*   Updated: 2025/06/27 15:37:17 by elikavak         ###   ########.fr       */
+/*   Updated: 2025/06/27 16:05:00 by elikavak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int main()
     jim.attack();
     jim.setWeapon(knife);
     jim.attack();
-    
+
     std::cout<<"-----------------------------------------------------------"<<std::endl;
     std::cout<<"                  WAR WITH ALICE, MARK AND EVA                       "<<std::endl;
-    
+
     Weapon sword("long sword");
     HumanA alice("Alice", sword);
     alice.attack();
@@ -49,9 +49,9 @@ int main()
     eva.attack();
     eva.setWeapon(dagger);
     eva.attack();
-    
+
     dagger.setType("poisoned dagger");
     eva.attack();
-    
+
     return 0;
 }
